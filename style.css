@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: linear-gradient(180deg, #4376F9 0%, rgba(63, 5, 136, 0.67) 100%);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* SECTION */
+.faq{
+    min-height:100vh;
+}
+
+.container{
+
+    background: white;
+    border-radius: 2rem;
+    min-height:70vh;
+    width:80%;
+}
+
+.img{
+    flex-direction: column;
+    flex:2 1 55rem;
+    background: red;
+}
+
+.img img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.questions{
+    flex-direction: column;
+    flex:1 1 30rem;
+}
+
+.question{
+    border-bottom: #E4E4E4 1px solid;
+    min-height:5vh;
+    margin:2rem;
+}
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight:500;
+}
+p{
+    color:#5F5F5F;
+}
+.button{
+    cursor: pointer;
+    min-height:5vh;
+}
+
+.button:hover{
+    box-shadow: 0px 13px 15px -20px #111; 
+    transition: all 0.3s ease-in-out;
+}
+.quest-sect{
+    width:100%;
+    
+    margin: 5rem;
+}
+/* Answer reveal start */
+.answer{
+    opacity:0;
+    height: 0;
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.answer P{
+    padding:0.8rem 0rem;
+    pointer-events: none;
+}
+.show{
+    transition: all 0.3s ease-out;
+    opacity: 1;
+    display: block;
+    height:8vh;
+    pointer-events: none;
+}
+
+.font-weight{
+    font-weight: 600;
+}
+
+.button.flip i{
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width:1025px) and (min-width:501px){
+    html{
+        font-size: 2rem;
+    }
+    .container{
+        flex-wrap: wrap;
+    }
+    
+    .questions h1{
+        margin-top: 3rem;
+    }
+    
+    .show{
+        height:10vh;
+    }
+}
+
+@media screen and (max-width:500px){
+    html{
+        font-size:1rem;
+    }
+
+    .container{
+        flex-wrap: wrap;
+    }
+
+    .show{
+        height:12vh;
+    }
+
+}
