@@ -119,7 +119,7 @@ p{
     }
     
     .show{
-        height:10vh;
+        height:15vh;
     }
 }
 
@@ -132,8 +132,5 @@ p{
         flex-wrap: wrap;
     }
 
-    .show{
-        height:12vh;
-    }
 
 }
